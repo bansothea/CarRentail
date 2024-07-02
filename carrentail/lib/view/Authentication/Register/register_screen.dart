@@ -1,34 +1,25 @@
-import 'dart:math';
-import 'dart:ui';
-
 import 'package:carrentail/core/resource/color.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Material(
+       child: Scaffold(
         appBar: AppBar(
           leading : IconButton(
             onPressed: (){}, 
             icon: const Icon(Icons.arrow_back)),
         ),
-      body: Container(
-        padding: const EdgeInsets.all(25),
-
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Welcome to, Pikbil👌.",
+        body: Container(
+          padding: const EdgeInsets.all(25),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+              "Nice to know you! 😉",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 26,
@@ -36,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               ),
               ),
             const Text(
-              "Enter your pikbil account to continue.",
+              "If you are first time please register here.",
               style: TextStyle(
                 fontWeight:FontWeight.w300,
               ),
@@ -44,40 +35,11 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Text(
-              "Email address",
+            const Text(
+              "Full name",
               style: TextStyle(
-                color: CRColors.primary,
-                fontWeight:FontWeight.bold,
-                fontSize: 16,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide(
-                    color:Colors.black,
-                    width: 1.0,
-                  )
-                ),
-
-                hintText: "Your email address"
-
-              ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Password",
-              style: TextStyle(
-                color: CRColors.primary,
-                fontWeight:FontWeight.bold,
-                fontSize: 16,
+                fontWeight: FontWeight.bold
+                
               ),
             ),
             const SizedBox(
@@ -88,17 +50,59 @@ class LoginScreen extends StatelessWidget {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10)
                 ),
-                hintText: "Your password",
-                suffixIcon: const  Icon(
-                  Icons.remove_red_eye_outlined,
-                  ),
+                hintText: "Your full name",
+                
               ),
             ),
-
             const SizedBox(
               height: 20,
             ),
-
+            const Text(
+              "Email address",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+                
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                hintText: "Your email address",
+                
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Text(
+              "Password",
+              style: TextStyle(
+                fontWeight: FontWeight.bold
+                
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10)
+                  
+                ),
+                suffixIcon: const Icon(Icons.remove_red_eye_outlined),
+                hintText: "Your password",
+                
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             ElevatedButton(
               onPressed: (){},
               style: ElevatedButton.styleFrom(
@@ -110,26 +114,17 @@ class LoginScreen extends StatelessWidget {
                 )
               ),
               child: const Text(
-                "Login",
+                "Register",
                 style: TextStyle(
                   fontWeight: FontWeight.bold
                 ),
               ),
               
               ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: (){},
-                child: const Text(
-                  "Forget Password?",
-                  style:TextStyle(
-                    fontWeight:FontWeight.w300,
-                  )
-                  ),
-                ),
-            ),
-            const Align(
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
               alignment: Alignment.center,
               child:Row(
                 children: [
@@ -213,14 +208,11 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
            
-
-            
-          ],
+            ],
+          ),
         ),
-      )
-       
-       
-      ),
+
+       ),
     );
   }
 }

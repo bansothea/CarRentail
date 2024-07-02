@@ -1,8 +1,9 @@
 
+import 'package:carrentail/view/Authentication/Register/register_screen.dart';
 import 'package:carrentail/view/Authentication/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:carrentail/core/resource/color.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,10 +21,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
          primaryColor: Colors.blue,
          useMaterial3: true,
-         textTheme: GoogleFonts.urbanistTextTheme(),
-         
+         fontFamily: 'urbanist',
+         colorScheme: ColorScheme.fromSeed(seedColor: CRColors.primary)
       ),
-      home: const  LoginScreen() ,
+      home: const  RegisterScreen() ,
       
     );
   }
