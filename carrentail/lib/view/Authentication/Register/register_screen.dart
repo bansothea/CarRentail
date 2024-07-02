@@ -35,11 +35,11 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            const Text(
+            Text(
               "Full name",
               style: TextStyle(
-                fontWeight: FontWeight.bold
-                
+                fontWeight: FontWeight.bold,
+                color: CRColors.primary,
               ),
             ),
             const SizedBox(
@@ -57,10 +57,11 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               "Email address",
               style: TextStyle(
-                fontWeight: FontWeight.bold
+                fontWeight: FontWeight.bold,
+                color: CRColors.primary,
                 
               ),
             ),
@@ -79,11 +80,11 @@ class RegisterScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               "Password",
               style: TextStyle(
-                fontWeight: FontWeight.bold
-                
+                fontWeight: FontWeight.bold,
+                color: CRColors.primary,
               ),
             ),
             const SizedBox(
@@ -116,13 +117,13 @@ class RegisterScreen extends StatelessWidget {
               child: const Text(
                 "Register",
                 style: TextStyle(
-                  fontWeight: FontWeight.bold
+                  fontSize: 16
                 ),
               ),
               
               ),
               const SizedBox(
-                height: 20,
+                height: 40,
               ),
               const Align(
               alignment: Alignment.center,
@@ -131,7 +132,7 @@ class RegisterScreen extends StatelessWidget {
                   Expanded(child:  Divider(
 
                   )),
-                  Text("Or Login"),
+                  Text("Or Register with"),
                   Expanded(child:  Divider(
                   )),
                 ],
@@ -198,7 +199,7 @@ class RegisterScreen extends StatelessWidget {
                    const Text("Dont have a pikbil account?"),
                    TextButton(
                     onPressed: (){}, 
-                    child: Text("Register",
+                    child: Text("Login",
                       style: TextStyle(
                         fontWeight:FontWeight.bold,
                         color: CRColors.primary,
