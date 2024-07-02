@@ -1,8 +1,5 @@
 
-import 'package:carrentail/view/splashScreen/splash_carConfidently_screen.dart';
-import 'package:carrentail/view/splashScreen/splash_carOption_screen.dart';
-import 'package:carrentail/view/splashScreen/splash_carSupport_screen.dart';
-import 'package:carrentail/view/splashScreen/splash_logo_screen.dart';
+import 'package:carrentail/view/Authentication/login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -26,7 +23,7 @@ class MyApp extends StatelessWidget {
          textTheme: GoogleFonts.urbanistTextTheme(),
          
       ),
-      home: const  SplashCarSupportScreen() ,
+      home: const  LoginScreen() ,
       
     );
   }
